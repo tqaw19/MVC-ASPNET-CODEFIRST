@@ -45,6 +45,7 @@ namespace University2.Migrations
                         FirstName = c.String(nullable: false, maxLength: 50),
                         HireDate = c.DateTime(),
                         EnrollmentDate = c.DateTime(),
+                        IsActive = c.Boolean(),
                         Discriminator = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.ID);
@@ -55,6 +56,7 @@ namespace University2.Migrations
                     {
                         InstructorID = c.Int(nullable: false),
                         Location = c.String(maxLength: 50),
+                        IsActive = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.InstructorID)
                 .ForeignKey("dbo.People", t => t.InstructorID)

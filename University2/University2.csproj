@@ -127,17 +127,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorsController.cs" />
+    <Compile Include="Controllers\OfficeAssignmentsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910212306182_v1.cs" />
-    <Compile Include="Migrations\201910212306182_v1.Designer.cs">
-      <DependentUpon>201910212306182_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910220035126_v2.cs" />
-    <Compile Include="Migrations\201910220035126_v2.Designer.cs">
-      <DependentUpon>201910220035126_v2.cs</DependentUpon>
+    <Compile Include="Migrations\201910220320104_v1.cs" />
+    <Compile Include="Migrations\201910220320104_v1.Designer.cs">
+      <DependentUpon>201910220320104_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -191,6 +189,16 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Instructors\Create.cshtml" />
+    <Content Include="Views\Instructors\Delete.cshtml" />
+    <Content Include="Views\Instructors\Details.cshtml" />
+    <Content Include="Views\Instructors\Edit.cshtml" />
+    <Content Include="Views\Instructors\Index.cshtml" />
+    <Content Include="Views\OfficeAssignments\Create.cshtml" />
+    <Content Include="Views\OfficeAssignments\Delete.cshtml" />
+    <Content Include="Views\OfficeAssignments\Details.cshtml" />
+    <Content Include="Views\OfficeAssignments\Edit.cshtml" />
+    <Content Include="Views\OfficeAssignments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -209,11 +217,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910212306182_v1.resx">
-      <DependentUpon>201910212306182_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910220035126_v2.resx">
-      <DependentUpon>201910220035126_v2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910220320104_v1.resx">
+      <DependentUpon>201910220320104_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
