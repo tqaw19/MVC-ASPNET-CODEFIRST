@@ -15,6 +15,8 @@ namespace University2.Models
 
         public DateTime EnrollmentDate { get; set; }
 
+        public bool IsActive { get; set; } = true;
+
         public virtual ICollection<Enrollment> Enrollments { get; set; }
     }
 }

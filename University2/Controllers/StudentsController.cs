@@ -18,7 +18,7 @@ namespace University2.Controllers
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            return View(db.Students.Where(x=>x.IsActive==true).ToList());
         }
 
         // GET: Students/Details/5
@@ -47,7 +47,7 @@ namespace University2.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Student student)
+        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate,IsActive")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +111,9 @@ namespace University2.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Student student = db.Students.Find(id);
-            db.People.Remove(student);
+            //db.Students.Remove(student);
+            student.IsActive = false;
+            //db.Students.Where(m => m.IsActive == false);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
